@@ -21,13 +21,17 @@ setList("")
     } 
 
     return (
-        <div>
-              <input type="text" value={addList} onChange={(e) =>{
+<body>
+<div className="list-input-div">
+              <input type="text"
+              placeholder='Enter your task'
+              value={addList} onChange={(e) =>{
                         setList(e.target.value);
                     }} 
                 />
-            <button onClick={HandleAdd}>Submit</button>
+            <button onClick={HandleAdd}>+</button>
         </div>
+</body>
     );
 }
 

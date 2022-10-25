@@ -9,7 +9,7 @@ const TodoList = (props) => {
 
      const item =useSelector((state)=>(state.list_items))
      //console.log(item);
-     const [model,setModel] = useState(false)
+     
     
 
     
@@ -18,13 +18,16 @@ const TodoList = (props) => {
      }
     
     return (
-        <div className={model ? "model open": "model"}>
+        <div>
 
         
             {item.map((item)=>{
                 
                 return(
-                    <div key={item.id}>
+                    <div key={item.id} className="list-item">
+                        <div className="list-item-div">
+                            
+                       
                     <h1>List item: {item.addList}</h1>
 
                     <button onClick={async()=> {
@@ -38,6 +41,7 @@ const TodoList = (props) => {
 
                     }}>Delete</button>
                     {/* <EditList edit_id={item.id}/> */}
+                    </div>
                     </div>
 
                 )

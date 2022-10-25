@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux"
 import { db } from './firebase/config';
 import {addListItem} from './action/todoAction'
 import TodoList from './components/todoList';
+import "./myStyles.css"
 
 
 function App() {
